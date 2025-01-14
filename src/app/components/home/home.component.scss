@@ -1,98 +1,120 @@
 .weather-container {
-    background: linear-gradient(180deg, #6db3f2, #1e81b0); 
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00bcd4, #8e24aa);
+    /* Gradiente com cores vivas */
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
     color: #fff;
 
     h1 {
         text-align: center;
-        margin-bottom: 20px;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); 
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
     }
 
     .weather-card {
-        background: #e3f2fd; 
+        background: #e3f2fd;
         color: #333;
-        padding: 20px;
-        border-radius: 8px;
+        padding: 30px;
+        border-radius: 12px;
         text-align: center;
-        margin-bottom: 20px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+        margin-bottom: 30px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+        }
 
         .location {
-            font-size: 16px;
+            font-size: 18px;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .temperature {
             h2 {
-                font-size: 48px;
+                font-size: 56px;
                 margin: 0;
-                color: #1565c0; 
+                color: #1565c0;
+                font-weight: bold;
 
                 span {
-                    font-size: 24px;
-                    color: #5c6bc0; 
+                    font-size: 26px;
+                    color: #5c6bc0;
+                    font-weight: normal;
                 }
             }
 
             .details {
-                margin-top: 10px;
-                font-size: 14px;
+                margin-top: 15px;
+                font-size: 16px;
                 color: #1e88e5;
+                font-weight: 500;
 
                 .arrow {
-                    color: #1565c0; 
+                    color: #1565c0;
                 }
             }
         }
-
-          
     }
 
     .search {
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 8px;
 
         input {
             width: 70%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ddd;
-            border-radius: 5px 0 0 5px;
+            border-radius: 8px;
             outline: none;
+            font-size: 16px;
 
             &:focus {
                 border-color: #1e88e5;
-                box-shadow: 0px 0px 4px rgba(30, 136, 229, 0.5);
+                box-shadow: 0px 0px 6px rgba(30, 136, 229, 0.5);
             }
         }
 
         button {
-            background: #1565c0; 
+            background: #1565c0;
             border: none;
-            padding: 10px 20px;
-            border-radius: 0 5px 5px 0;
+            padding: 12px 20px;
+            border-radius: 8px;
             cursor: pointer;
             color: white;
-            transition: background-color 0.3s;
+            font-size: 16px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
 
             &:hover {
-                background: #1e88e5; 
+                background: #1e88e5;
+                transform: scale(1.1);
             }
 
             img {
-                width: 20px;
-                height: 20px;
-                filter: invert(1); 
+                width: 18px;
+                height: 18px;
+                filter: invert(1);
             }
-                        .error-message {
-                            color: red;
-                            font-size: 16px;
-                            margin-top: 10px;
-                        }
         }
     }
 
-    
+    .error-message {
+        color: #e57373;
+        /* Vermelho suave */
+        font-size: 18px;
+        margin-top: 15px;
+        font-weight: 600;
+        text-align: center;
+        background-color: #ffe6e6;
+        /* Fundo leve para destacar */
+        padding: 10px;
+        border-radius: 8px;
+    }
 }
