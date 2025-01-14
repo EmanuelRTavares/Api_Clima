@@ -1,0 +1,28 @@
+<div class="weather-container">
+    <h1>Previsão do tempo</h1>
+    <div class="weather-card">
+        <div class="location">
+            <p>{{ weatherData.name }}</p>
+        </div>
+        <div class="temperature">
+            <h2>{{ weatherData.temp }}° <span>{{ weatherData.description }}</span></h2>
+            <div class="details">
+                <p><span class="arrow">↓</span> {{ weatherData.temp_min }}° <span c lass="arrow">↑</span> {{
+                    weatherData.temp_max }}°</p>
+                <p><span>Sensação </span>{{weatherData.feels_like }}°</p>
+                <p><span>Vento </span>{{weatherData.speed }} km/h</p>
+                <p><span>Humidade</span> {{weatherData.humidity }} % </p>
+            </div>
+        </div>
+    </div>
+    <!-- campo de pesquisa -->
+    <div class="search">
+        <input type="text" placeholder="Insira aqui o nome da cidade" [(ngModel)]="cidade" />
+        <button (click)="searchCity()"><img src="assets\search.png" alt="Search" /></button>
+    </div>
+    <!-- Exibição de erro, caso ocorra -->
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+    </div>
+
+</div>

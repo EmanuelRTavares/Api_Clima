@@ -1,0 +1,98 @@
+.weather-container {
+    background: linear-gradient(180deg, #6db3f2, #1e81b0); 
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); 
+    }
+
+    .weather-card {
+        background: #e3f2fd; 
+        color: #333;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin-bottom: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+
+        .location {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .temperature {
+            h2 {
+                font-size: 48px;
+                margin: 0;
+                color: #1565c0; 
+
+                span {
+                    font-size: 24px;
+                    color: #5c6bc0; 
+                }
+            }
+
+            .details {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #1e88e5;
+
+                .arrow {
+                    color: #1565c0; 
+                }
+            }
+        }
+
+          
+    }
+
+    .search {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        input {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+
+            &:focus {
+                border-color: #1e88e5;
+                box-shadow: 0px 0px 4px rgba(30, 136, 229, 0.5);
+            }
+        }
+
+        button {
+            background: #1565c0; 
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background: #1e88e5; 
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+                filter: invert(1); 
+            }
+                        .error-message {
+                            color: red;
+                            font-size: 16px;
+                            margin-top: 10px;
+                        }
+        }
+    }
+
+    
+}
